@@ -9,4 +9,7 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var img: UILabel!
+    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
 }
