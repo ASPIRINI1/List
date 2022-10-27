@@ -18,7 +18,7 @@
 		DEC8A94529072F1F00D4DFED /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A94429072F1F00D4DFED /* TableViewCell.swift */; };
 		DEC8A9472907371600D4DFED /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A9462907371500D4DFED /* DetailViewController.swift */; };
 		DEC8A94A2907379F00D4DFED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A9492907379F00D4DFED /* NetworkManager.swift */; };
-		DEC8A94C290737CB00D4DFED /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A94B290737CB00D4DFED /* Item.swift */; };
+		DEC8A94C290737CB00D4DFED /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A94B290737CB00D4DFED /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		DEC8A94429072F1F00D4DFED /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		DEC8A9462907371500D4DFED /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DEC8A9492907379F00D4DFED /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		DEC8A94B290737CB00D4DFED /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		DEC8A94B290737CB00D4DFED /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 		DEC8A93A29072EAB00D4DFED /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DEC8A94B290737CB00D4DFED /* Item.swift */,
+				DEC8A94B290737CB00D4DFED /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -189,7 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DEC8A94329072F1600D4DFED /* CollectionViewCell.swift in Sources */,
-				DEC8A94C290737CB00D4DFED /* Item.swift in Sources */,
+				DEC8A94C290737CB00D4DFED /* Post.swift in Sources */,
 				DEC8A93E29072EF900D4DFED /* CollectionViewController.swift in Sources */,
 				DEC8A92729072E0D00D4DFED /* AppDelegate.swift in Sources */,
 				DEC8A94529072F1F00D4DFED /* TableViewCell.swift in Sources */,

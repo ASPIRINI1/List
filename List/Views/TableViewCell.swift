@@ -11,6 +11,10 @@ class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
     
+    static let identefier = "TableViewCell"
+    
+    func fill(post: Post) {
+        self.titleLabel.text = post.title
+    }
 }

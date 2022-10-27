@@ -9,7 +9,12 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var img: UILabel!
-    @IBOutlet weak var detailLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+    static let identefier = "CollectionViewCell"
+    
+    func fill(post: Post) {
+        self.titleLabel.text = post.title
+    }
 }
