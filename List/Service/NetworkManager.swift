@@ -48,6 +48,10 @@ class NetworkManager {
     }
     
     func pushPost() {
-        
+        let request = URLRequest(url: URL(string: "https://jsonplaceholder.typicode.com/posts")!)
+        let data = Data(count: 32)// Post(albumId: 0, id: 0, title: "", imageURL: "", thumbnailUrl: "")
+        URLSession.shared.uploadTask(with: request, from: data) { data, response, error in
+            print(response)
+        }
     }
 }
