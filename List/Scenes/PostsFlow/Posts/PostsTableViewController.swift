@@ -22,6 +22,7 @@ class PostsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Posts"
         tableView.register(PostsTableViewCell.self)
         viewModel.viewLoaded()
         viewModel.updateData = { [unowned self] in
@@ -32,7 +33,7 @@ class PostsTableViewController: UITableViewController {
     }
 }
 
-//  MARK: UItableViewDataSource
+//  MARK: - UItableViewDataSource
 
 extension PostsTableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,7 +48,7 @@ extension PostsTableViewController {
     }
 }
 
-//  MARK: UItableViewDelegate
+//  MARK: - UItableViewDelegate
 
 extension PostsTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

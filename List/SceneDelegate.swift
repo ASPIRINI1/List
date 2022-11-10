@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let vc = PostsTableViewController(viewModel: PostsViewModel())
-        window?.rootViewController = UINavigationController(rootViewController: vc)
+        let router = PostsFlowRouter(postsFlowFactory: PostsFlowFactory())
+        window?.rootViewController = router.navigationController
         window?.makeKeyAndVisible()
     }
 }

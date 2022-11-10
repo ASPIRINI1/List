@@ -7,7 +7,12 @@
 
 import Foundation
 
-class NetworkManager {
+protocol NetworkManagerProtocol {
+    func getPosts(completion: @escaping ([Post]?) -> ())
+    func getImage(url: String, completion: @escaping (Data?) -> ())
+}
+
+class NetworkManager: NetworkManagerProtocol {
     
     static let shared = NetworkManager()
     var url = URL(string: "https://jsonplaceholder.typicode.com/posts")
