@@ -12,6 +12,9 @@
 		DE67BFB7291D62FD00CCDF4C /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67BFAE291D62FD00CCDF4C /* PostsTableViewController.swift */; };
 		DE67BFB8291D62FD00CCDF4C /* PostsFlowFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67BFAF291D62FD00CCDF4C /* PostsFlowFactory.swift */; };
 		DE67BFB9291D62FD00CCDF4C /* PostsFlowRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67BFB0291D62FD00CCDF4C /* PostsFlowRouter.swift */; };
+		DE67BFBB291D648100CCDF4C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67BFBA291D648100CCDF4C /* DetailViewController.swift */; };
+		DE67BFBD291D64A800CCDF4C /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67BFBC291D64A800CCDF4C /* DetailViewModel.swift */; };
+		DE67BFC1291D64D000CCDF4C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE67BFC0291D64D000CCDF4C /* DetailView.swift */; };
 		DEC8A92729072E0D00D4DFED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A92629072E0D00D4DFED /* AppDelegate.swift */; };
 		DEC8A92929072E0D00D4DFED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A92829072E0D00D4DFED /* SceneDelegate.swift */; };
 		DEC8A93029072E0E00D4DFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC8A92F29072E0E00D4DFED /* Assets.xcassets */; };
@@ -28,6 +31,9 @@
 		DE67BFAE291D62FD00CCDF4C /* PostsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
 		DE67BFAF291D62FD00CCDF4C /* PostsFlowFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsFlowFactory.swift; sourceTree = "<group>"; };
 		DE67BFB0291D62FD00CCDF4C /* PostsFlowRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsFlowRouter.swift; sourceTree = "<group>"; };
+		DE67BFBA291D648100CCDF4C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		DE67BFBC291D64A800CCDF4C /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		DE67BFC0291D64D000CCDF4C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		DEC8A92329072E0D00D4DFED /* List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = List.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC8A92629072E0D00D4DFED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC8A92829072E0D00D4DFED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,9 @@
 		DE67BFB1291D62FD00CCDF4C /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				DE67BFBC291D64A800CCDF4C /* DetailViewModel.swift */,
+				DE67BFBA291D648100CCDF4C /* DetailViewController.swift */,
+				DE67BFC0291D64D000CCDF4C /* DetailView.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -217,11 +226,14 @@
 				DEC8A94C290737CB00D4DFED /* Post.swift in Sources */,
 				DE67BFB7291D62FD00CCDF4C /* PostsTableViewController.swift in Sources */,
 				DEC8A92729072E0D00D4DFED /* AppDelegate.swift in Sources */,
+				DE67BFC1291D64D000CCDF4C /* DetailView.swift in Sources */,
+				DE67BFBB291D648100CCDF4C /* DetailViewController.swift in Sources */,
 				DED98034291D1C37003B68EF /* UITableViewCell+identefier.swift in Sources */,
 				DED98036291D1CD4003B68EF /* UITableView+cellManagment.swift in Sources */,
 				DE67BFB9291D62FD00CCDF4C /* PostsFlowRouter.swift in Sources */,
 				DEC8A94A2907379F00D4DFED /* NetworkManager.swift in Sources */,
 				DE67BFB6291D62FD00CCDF4C /* PostsTableViewCell.swift in Sources */,
+				DE67BFBD291D64A800CCDF4C /* DetailViewModel.swift in Sources */,
 				DE67BFB5291D62FD00CCDF4C /* PostsViewModel.swift in Sources */,
 				DEC8A92929072E0D00D4DFED /* SceneDelegate.swift in Sources */,
 				DE67BFB8291D62FD00CCDF4C /* PostsFlowFactory.swift in Sources */,

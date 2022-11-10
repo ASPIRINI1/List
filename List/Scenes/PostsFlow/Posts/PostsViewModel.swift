@@ -12,13 +12,13 @@ protocol PostsViewModelProtocol {
     var posts: [Post]? { get set }
     func viewLoaded()
     func rowSelected(index: Int)
-    init(networkService: NetworkManagerProtocol ,router: RouterProtocol)
+    init(networkService: NetworkManagerProtocol ,router: PostsFlowRouterProtocol)
 }
 
 class PostsViewModel: PostsViewModelProtocol {
     
     let networkService: NetworkManagerProtocol
-    let router: RouterProtocol
+    let router: PostsFlowRouterProtocol
     var posts: [Post]? {
         didSet {
             updateData?()
@@ -26,7 +26,7 @@ class PostsViewModel: PostsViewModelProtocol {
     }
     var updateData: (() -> ())?
     
-    required init(networkService: NetworkManagerProtocol, router: RouterProtocol) {
+    required init(networkService: NetworkManagerProtocol, router: PostsFlowRouterProtocol) {
         self.networkService = networkService
         self.router = router
     }
@@ -38,6 +38,7 @@ class PostsViewModel: PostsViewModelProtocol {
     }
     
     func rowSelected(index: Int) {
-        
+        guard let post = posts?[index] else { return }
+        router.pushToDetail(post: post, animated: true)
     }
 }

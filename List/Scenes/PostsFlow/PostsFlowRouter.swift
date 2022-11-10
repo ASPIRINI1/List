@@ -12,7 +12,11 @@ protocol RouterProtocol {
     func popBack(animated: Bool)
 }
 
-class PostsFlowRouter: RouterProtocol {
+protocol PostsFlowRouterProtocol: RouterProtocol {
+    func pushToDetail(post: Post, animated: Bool)
+}
+
+class PostsFlowRouter: PostsFlowRouterProtocol {
     var navigationController = UINavigationController()
     var postsFlowFactory: PostsFlowFactoryProtocol
     
@@ -26,6 +30,6 @@ class PostsFlowRouter: RouterProtocol {
     }
     
     func pushToDetail(post: Post, animated: Bool) {
-        
+        navigationController.pushViewController(postsFlowFactory.createDetailViewController(router: self, post: post), animated: animated)
     }
 }

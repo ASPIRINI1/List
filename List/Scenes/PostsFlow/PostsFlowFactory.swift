@@ -8,18 +8,19 @@
 import UIKit
 
 protocol PostsFlowFactoryProtocol {
-    func createPostsTableViewController(router: RouterProtocol) -> UITableViewController
-    func createDetailViewController(router: RouterProtocol) -> UIViewController
+    func createPostsTableViewController(router: PostsFlowRouterProtocol) -> UITableViewController
+    func createDetailViewController(router: PostsFlowRouterProtocol, post: Post) -> UIViewController
 }
 
 class PostsFlowFactory: PostsFlowFactoryProtocol {
-    func createPostsTableViewController(router: RouterProtocol) -> UITableViewController {
+    func createPostsTableViewController(router: PostsFlowRouterProtocol) -> UITableViewController {
         let viewModel = PostsViewModel(networkService: NetworkManager.shared, router: router)
         return PostsTableViewController(viewModel: viewModel)
     }
     
-    func createDetailViewController(router: RouterProtocol) -> UIViewController {
-        return UIViewController()
+    func createDetailViewController(router: PostsFlowRouterProtocol, post: Post) -> UIViewController {
+        let viewModel = DetailViewModel(router: router, post: post)
+        return DetailViewController(viewModel: viewModel)
     }
 }
     
