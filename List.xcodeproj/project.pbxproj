@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		DEB7C984291C1FF100A18543 /* PostsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB7C983291C1FF100A18543 /* PostsTableViewController.swift */; };
-		DEB7C986291C200800A18543 /* PostsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB7C985291C200800A18543 /* PostsTableView.swift */; };
+		DEB7C988291C208B00A18543 /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB7C987291C208B00A18543 /* PostsViewModel.swift */; };
 		DEC8A92729072E0D00D4DFED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A92629072E0D00D4DFED /* AppDelegate.swift */; };
 		DEC8A92929072E0D00D4DFED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A92829072E0D00D4DFED /* SceneDelegate.swift */; };
 		DEC8A93029072E0E00D4DFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC8A92F29072E0E00D4DFED /* Assets.xcassets */; };
 		DEC8A93329072E0E00D4DFED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC8A93129072E0E00D4DFED /* LaunchScreen.storyboard */; };
 		DEC8A94A2907379F00D4DFED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A9492907379F00D4DFED /* NetworkManager.swift */; };
 		DEC8A94C290737CB00D4DFED /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A94B290737CB00D4DFED /* Post.swift */; };
+		DED9802F291D02BB003B68EF /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9802E291D02BB003B68EF /* PostsTableViewCell.swift */; };
+		DED98034291D1C37003B68EF /* UITableViewCell+identefier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED98033291D1C37003B68EF /* UITableViewCell+identefier.swift */; };
+		DED98036291D1CD4003B68EF /* UITableView+cellManagment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED98035291D1CD4003B68EF /* UITableView+cellManagment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DEB7C983291C1FF100A18543 /* PostsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewController.swift; sourceTree = "<group>"; };
-		DEB7C985291C200800A18543 /* PostsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableView.swift; sourceTree = "<group>"; };
+		DEB7C987291C208B00A18543 /* PostsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModel.swift; sourceTree = "<group>"; };
 		DEC8A92329072E0D00D4DFED /* List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = List.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC8A92629072E0D00D4DFED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC8A92829072E0D00D4DFED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +31,9 @@
 		DEC8A93429072E0E00D4DFED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEC8A9492907379F00D4DFED /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		DEC8A94B290737CB00D4DFED /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DED9802E291D02BB003B68EF /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
+		DED98033291D1C37003B68EF /* UITableViewCell+identefier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+identefier.swift"; sourceTree = "<group>"; };
+		DED98035291D1CD4003B68EF /* UITableView+cellManagment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+cellManagment.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +59,9 @@
 		DEB7C981291C1FA000A18543 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				DEB7C987291C208B00A18543 /* PostsViewModel.swift */,
 				DEB7C983291C1FF100A18543 /* PostsTableViewController.swift */,
-				DEB7C985291C200800A18543 /* PostsTableView.swift */,
+				DED9802E291D02BB003B68EF /* PostsTableViewCell.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -90,6 +97,7 @@
 				DEC8A9482907378E00D4DFED /* Service */,
 				DEC8A93A29072EAB00D4DFED /* Models */,
 				DEB7C980291C1F4F00A18543 /* Scenes */,
+				DED98032291D1C19003B68EF /* Extensions */,
 				DEC8A92F29072E0E00D4DFED /* Assets.xcassets */,
 				DEC8A93129072E0E00D4DFED /* LaunchScreen.storyboard */,
 				DEC8A93429072E0E00D4DFED /* Info.plist */,
@@ -111,6 +119,15 @@
 				DEC8A9492907379F00D4DFED /* NetworkManager.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		DED98032291D1C19003B68EF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DED98033291D1C37003B68EF /* UITableViewCell+identefier.swift */,
+				DED98035291D1CD4003B68EF /* UITableView+cellManagment.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,10 +202,13 @@
 			files = (
 				DEC8A94C290737CB00D4DFED /* Post.swift in Sources */,
 				DEC8A92729072E0D00D4DFED /* AppDelegate.swift in Sources */,
+				DED98034291D1C37003B68EF /* UITableViewCell+identefier.swift in Sources */,
+				DED98036291D1CD4003B68EF /* UITableView+cellManagment.swift in Sources */,
 				DEC8A94A2907379F00D4DFED /* NetworkManager.swift in Sources */,
-				DEB7C986291C200800A18543 /* PostsTableView.swift in Sources */,
 				DEC8A92929072E0D00D4DFED /* SceneDelegate.swift in Sources */,
 				DEB7C984291C1FF100A18543 /* PostsTableViewController.swift in Sources */,
+				DED9802F291D02BB003B68EF /* PostsTableViewCell.swift in Sources */,
+				DEB7C988291C208B00A18543 /* PostsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

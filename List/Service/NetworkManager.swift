@@ -10,7 +10,7 @@ import Foundation
 class NetworkManager {
     
     static let shared = NetworkManager()
-    var url = URL(string: "https://jsonplaceholder.typicode.com/photos")
+    var url = URL(string: "https://jsonplaceholder.typicode.com/posts")
     
     private init() { }
     
@@ -35,8 +35,7 @@ class NetworkManager {
     
     func getImage(url: String, completion: @escaping (Data?) -> ()) {
         guard let url = URL(string: url) else { return }
-        let queue = DispatchQueue(label: "com.network.myQueue", attributes: .concurrent)
-        let workItem = DispatchWorkItem {
+        DispatchQueue.global().async {
             do {
                 completion(try Data(contentsOf: url))
             } catch {
@@ -44,14 +43,13 @@ class NetworkManager {
                 print(error)
             }
         }
-        queue.async(execute: workItem)
     }
     
-    func pushPost() {
-        let request = URLRequest(url: URL(string: "https://jsonplaceholder.typicode.com/posts")!)
-        let data = Data(count: 32)// Post(albumId: 0, id: 0, title: "", imageURL: "", thumbnailUrl: "")
-        URLSession.shared.uploadTask(with: request, from: data) { data, response, error in
-            print(response)
-        }
-    }
+//    func pushPost() {
+//        let request = URLRequest(url: URL(string: "https://jsonplaceholder.typicode.com/posts")!)
+//        let data = Data(count: 32)// Post(albumId: 0, id: 0, title: "", imageURL: "", thumbnailUrl: "")
+//        URLSession.shared.uploadTask(with: request, from: data) { data, response, error in
+//            print(response)
+//        }
+//    }
 }

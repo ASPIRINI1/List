@@ -7,11 +7,9 @@
 
 import Foundation
 
-struct Post: Decodable {    
-    var albumId: Int
+struct Post: Decodable {
+    var userId: Int
     var id: Int
     var title: String
-    var imageURL: String
-    var thumbnailUrl: String
-    var image: Data?
+    var body: String
 }
