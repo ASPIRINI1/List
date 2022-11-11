@@ -7,20 +7,21 @@
 
 import Foundation
 
-protocol NetworkManagerProtocol {
+protocol NetworkServiceProtocol {
     func getPosts(completion: @escaping ([Post]?) -> ())
     func getImage(url: String, completion: @escaping (Data?) -> ())
+    func pushPost(post: Post, completion: @escaping (Bool) -> ())
 }
 
-class NetworkManager: NetworkManagerProtocol {
+class NetworkService: NetworkServiceProtocol {
     
-    static let shared = NetworkManager()
+    static let shared = NetworkService()
     var url = URL(string: "https://jsonplaceholder.typicode.com/posts")
     
     private init() { }
     
     func getPosts(completion: @escaping ([Post]?) -> ()) {
-        guard let url = url else { return }
+        guard let url = url else { completion(nil); return }
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 print(error)
@@ -50,11 +51,21 @@ class NetworkManager: NetworkManagerProtocol {
         }
     }
     
-//    func pushPost() {
-//        let request = URLRequest(url: URL(string: "https://jsonplaceholder.typicode.com/posts")!)
-//        let data = Data(count: 32)// Post(albumId: 0, id: 0, title: "", imageURL: "", thumbnailUrl: "")
-//        URLSession.shared.uploadTask(with: request, from: data) { data, response, error in
-//            print(response)
-//        }
-//    }
+    func pushPost(post: Post, completion: @escaping (Bool) -> ()) {
+        guard let url = url else { completion(false); return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        guard let data = try? JSONEncoder().encode(post) else { completion(false); return }
+        URLSession.shared.uploadTask(with: request, from: data) { _ , response, error in
+            if let error = error {
+                print(error)
+                completion(false)
+                return
+            }
+            if let response = response {
+                print(response)
+                completion(true)
+            }
+        }.resume()
+    }
 }

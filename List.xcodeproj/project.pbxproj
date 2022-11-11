@@ -19,7 +19,7 @@
 		DEC8A92929072E0D00D4DFED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A92829072E0D00D4DFED /* SceneDelegate.swift */; };
 		DEC8A93029072E0E00D4DFED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEC8A92F29072E0E00D4DFED /* Assets.xcassets */; };
 		DEC8A93329072E0E00D4DFED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC8A93129072E0E00D4DFED /* LaunchScreen.storyboard */; };
-		DEC8A94A2907379F00D4DFED /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A9492907379F00D4DFED /* NetworkManager.swift */; };
+		DEC8A94A2907379F00D4DFED /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A9492907379F00D4DFED /* NetworkService.swift */; };
 		DEC8A94C290737CB00D4DFED /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC8A94B290737CB00D4DFED /* Post.swift */; };
 		DED98034291D1C37003B68EF /* UITableViewCell+identefier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED98033291D1C37003B68EF /* UITableViewCell+identefier.swift */; };
 		DED98036291D1CD4003B68EF /* UITableView+cellManagment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED98035291D1CD4003B68EF /* UITableView+cellManagment.swift */; };
@@ -40,7 +40,7 @@
 		DEC8A92F29072E0E00D4DFED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEC8A93229072E0E00D4DFED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEC8A93429072E0E00D4DFED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DEC8A9492907379F00D4DFED /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		DEC8A9492907379F00D4DFED /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		DEC8A94B290737CB00D4DFED /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		DED98033291D1C37003B68EF /* UITableViewCell+identefier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+identefier.swift"; sourceTree = "<group>"; };
 		DED98035291D1CD4003B68EF /* UITableView+cellManagment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+cellManagment.swift"; sourceTree = "<group>"; };
@@ -139,7 +139,7 @@
 		DEC8A9482907378E00D4DFED /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				DEC8A9492907379F00D4DFED /* NetworkManager.swift */,
+				DEC8A9492907379F00D4DFED /* NetworkService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -231,7 +231,7 @@
 				DED98034291D1C37003B68EF /* UITableViewCell+identefier.swift in Sources */,
 				DED98036291D1CD4003B68EF /* UITableView+cellManagment.swift in Sources */,
 				DE67BFB9291D62FD00CCDF4C /* PostsFlowRouter.swift in Sources */,
-				DEC8A94A2907379F00D4DFED /* NetworkManager.swift in Sources */,
+				DEC8A94A2907379F00D4DFED /* NetworkService.swift in Sources */,
 				DE67BFB6291D62FD00CCDF4C /* PostsTableViewCell.swift in Sources */,
 				DE67BFBD291D64A800CCDF4C /* DetailViewModel.swift in Sources */,
 				DE67BFB5291D62FD00CCDF4C /* PostsViewModel.swift in Sources */,

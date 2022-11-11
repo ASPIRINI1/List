@@ -14,12 +14,12 @@ protocol PostsFlowFactoryProtocol {
 
 class PostsFlowFactory: PostsFlowFactoryProtocol {
     func createPostsTableViewController(router: PostsFlowRouterProtocol) -> UITableViewController {
-        let viewModel = PostsViewModel(networkService: NetworkManager.shared, router: router)
+        let viewModel = PostsViewModel(networkService: NetworkService.shared, router: router)
         return PostsTableViewController(viewModel: viewModel)
     }
     
     func createDetailViewController(router: PostsFlowRouterProtocol, post: Post) -> UIViewController {
-        let viewModel = DetailViewModel(router: router, post: post)
+        let viewModel = DetailViewModel(router: router, networkService: NetworkService.shared, post: post)
         return DetailViewController(viewModel: viewModel)
     }
 }

@@ -10,16 +10,20 @@ import Foundation
 protocol DetailViewModelProtocol {
     var updateData: (() -> ())? { get set }
     var post: Post { get }
-    init(router: RouterProtocol, post: Post)
+    init(router: PostsFlowRouterProtocol, networkService: NetworkServiceProtocol, post: Post)
     func viewLoaded()
 }
 
 class DetailViewModel: DetailViewModelProtocol {
     var updateData: (() -> ())?
+    var router: PostsFlowRouterProtocol
     var post: Post
+    var networkService: NetworkServiceProtocol
     
-    required init(router: RouterProtocol, post: Post) {
+    required init(router: PostsFlowRouterProtocol, networkService: NetworkServiceProtocol, post: Post) {
+        self.router = router
         self.post = post
+        self.networkService = networkService
     }
     
     func viewLoaded() {
