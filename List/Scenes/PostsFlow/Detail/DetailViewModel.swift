@@ -12,6 +12,7 @@ protocol DetailViewModelProtocol {
     var post: Post { get }
     init(router: PostsFlowRouterProtocol, networkService: NetworkServiceProtocol, post: Post)
     func viewLoaded()
+    func postButtonPressed()
 }
 
 class DetailViewModel: DetailViewModelProtocol {
@@ -30,5 +31,13 @@ class DetailViewModel: DetailViewModelProtocol {
         updateData?()
     }
     
-    
+    func postButtonPressed() {
+        networkService.pushPost(post: post) { success in
+            if success {
+                
+            } else {
+                
+            }
+        }
+    }
 }

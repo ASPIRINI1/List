@@ -10,6 +10,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var viewModel: DetailViewModelProtocol
+    lazy var customView = DetailView(frame: view.frame)
     
     init(viewModel: DetailViewModelProtocol) {
         self.viewModel = viewModel
@@ -20,17 +21,15 @@ class DetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func loadView() {
-        view = DetailView()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(customView)
         viewModel.updateData = { [unowned self] in
-            if let view = view as? DetailView {
-                view.update(title: viewModel.post.title, description: viewModel.post.body)
-            }
+            customView.update(title: viewModel.post.title, description: viewModel.post.body)
         }
         viewModel.viewLoaded()
+        customView.postButtonDidTap = { [unowned self] in
+            self.viewModel.postButtonPressed()
+        }
     }
 }
