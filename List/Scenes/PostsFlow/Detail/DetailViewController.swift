@@ -24,12 +24,34 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(customView)
+        addViewModelListeners()
+        customView.postButtonDidTap = { [unowned self] in
+            guard let text = customView.descriptionTextView.text else { return }
+            self.viewModel.postButtonPressed(title: text)
+        }
+    }
+    
+    func addViewModelListeners() {
         viewModel.updateData = { [unowned self] in
-            customView.update(title: viewModel.post.title, description: viewModel.post.body)
+            DispatchQueue.main.async {
+                self.customView.update(title: self.viewModel.post.title, description: self.viewModel.post.body)
+            }
         }
         viewModel.viewLoaded()
-        customView.postButtonDidTap = { [unowned self] in
-            self.viewModel.postButtonPressed()
+        viewModel.postStatus = { [unowned self] success in
+            DispatchQueue.main.async {
+                var alert: UIAlertController
+                if success {
+                    alert = .init(title: "Success", message: nil, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Go back", style: .default) { _ in
+                        self.viewModel.goBackPressed()
+                    })
+                } else {
+                    alert = .init(title: "Fail", message: nil, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default))
+                }
+                self.present(alert, animated: true)
+            }
         }
     }
 }

@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 extension UITableView {
-    
     func register<T: UITableViewCell>(_ cellClass: T.Type) {
         register(cellClass, forCellReuseIdentifier: cellClass.identefier)
     }

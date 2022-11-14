@@ -9,16 +9,20 @@ import Foundation
 
 protocol DetailViewModelProtocol {
     var updateData: (() -> ())? { get set }
+    var postStatus: ((Bool) -> ())? { get set }
     var post: Post { get }
     init(router: PostsFlowRouterProtocol, networkService: NetworkServiceProtocol, post: Post)
     func viewLoaded()
-    func postButtonPressed()
+    func postButtonPressed(title: String)
+    func goBackPressed()
 }
 
 class DetailViewModel: DetailViewModelProtocol {
+    
     var updateData: (() -> ())?
-    var router: PostsFlowRouterProtocol
+    var postStatus: ((Bool) -> ())?
     var post: Post
+    var router: PostsFlowRouterProtocol
     var networkService: NetworkServiceProtocol
     
     required init(router: PostsFlowRouterProtocol, networkService: NetworkServiceProtocol, post: Post) {
@@ -31,13 +35,14 @@ class DetailViewModel: DetailViewModelProtocol {
         updateData?()
     }
     
-    func postButtonPressed() {
-        networkService.pushPost(post: post) { success in
-            if success {
-                
-            } else {
-                
-            }
+    func postButtonPressed(title: String) {
+        post.title = title
+        networkService.pushPost(post: self.post) { success in
+            self.postStatus?(success)
         }
+    }
+    
+    func goBackPressed() {
+        router.popBack(animated: true)
     }
 }
